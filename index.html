@@ -356,6 +356,7 @@
     border: 1px solid var(--border);
     font-size: 11.5px;
     vertical-align: top;
+    text-align: justify;
   }
 
   .opr-info-table td:first-child {
@@ -389,6 +390,7 @@
     font-size: 11.5px;
     line-height: 1.65;
     color: var(--text);
+    text-align: justify;
   }
 
   .opr-section-body.empty {
@@ -479,7 +481,7 @@
 
   /* Print styles */
   @media print {
-    body { background: white; }
+    body { background: white; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     .app { display: block; height: auto; }
     .app-header, .form-panel, .preview-toolbar { display: none !important; }
     .preview-panel {
@@ -491,6 +493,12 @@
       width: 100%;
       box-shadow: none;
     }
+    .opr-header { background: #1a2f5e !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .opr-section-header { background: #1a2f5e !important; color: white !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .opr-photos-header { background: #1a2f5e !important; color: white !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .opr-info-table td:first-child { background: #eef0f8 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .opr-gold-bar { background: #f0a500 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .opr-bottom-bar { background: #1a2f5e !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     @page { margin: 10mm; size: A4; }
   }
 </style>
